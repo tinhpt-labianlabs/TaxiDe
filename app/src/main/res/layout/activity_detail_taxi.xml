@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_dialog_detail"
+    android:layout_width="match_parent"
+    android:paddingTop="8dp"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp"
+    android:paddingBottom="32dp"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/btn_close"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/avt_taxi"
+        android:layout_marginTop="45dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/text_taxi_name"
+        android:layout_below="@+id/avt_taxi"
+        android:textStyle="bold"
+        android:textColor="#333"
+        android:textSize="32dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/text_price_4"
+        android:textSize="18sp"
+        android:layout_below="@id/text_taxi_name"
+        android:text="Gia 4 cho: 45k"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="18sp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/text_price_7"
+        android:layout_below="@id/text_price_4"
+        android:text="Gia 7 cho: 60k"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginLeft="16dp"
+        android:id="@+id/tv_des"
+        android:text="this is description"
+        android:textColor="#555"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/text_price_7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/btn_call"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:background="@drawable/bg_button_call"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="72dp"
+        android:layout_height="wrap_content"
+        android:text="Call"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_des"
+        />
+    <RatingBar
+        android:max="3"
+        android:rating="3"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/btn_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
