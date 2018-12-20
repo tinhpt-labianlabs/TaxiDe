@@ -1,4 +1,4 @@
-package com.labianlabs.lamthn.taxide.Landing;
+package com.labianlabs.lamthn.taxide.Views;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

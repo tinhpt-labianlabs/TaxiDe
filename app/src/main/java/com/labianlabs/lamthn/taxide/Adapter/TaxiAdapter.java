@@ -123,5 +123,4 @@ class TaxiHolder {
     ImageView imageAvatar;
     Button btnCall;
     LinearLayout containerInfo;
-
 }

@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Landing.LandingActivity" />
+        <activity android:name=".Views.LandingActivity" />
         <activity
             android:name=".Views.DetailTaxiActivity"
             android:configChanges="orientation|locale"
