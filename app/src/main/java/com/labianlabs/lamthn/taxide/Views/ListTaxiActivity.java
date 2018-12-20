@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import com.labianlabs.lamthn.taxide.Adapter.TaxiAdapter;
+import com.labianlabs.lamthn.taxide.AppInstance;
+import com.labianlabs.lamthn.taxide.Model.DatabaseAdapter;
+import com.labianlabs.lamthn.taxide.Model.DatabaseHelper;
 import com.labianlabs.lamthn.taxide.Model.Taxi;
 import com.labianlabs.lamthn.taxide.R;
 import com.labianlabs.lamthn.taxide.Utils.CommunityKeys;
@@ -22,6 +25,7 @@ public class ListTaxiActivity extends AppCompatActivity implements TaxiAdapter.I
         setContentView(R.layout.activity_list_taxi);
         mapView();
         setupCommonListTaxi();
+        mStore = AppInstance.getStore();
     }
 
     //region UTILS
@@ -33,17 +37,8 @@ public class ListTaxiActivity extends AppCompatActivity implements TaxiAdapter.I
         startActivity(intent);
     }
 
-    private void dataFake() {
-        taxis = new ArrayList<>();
-        Taxi taxi = new Taxi("La do", "0352974899", "description", null);
-        taxis.add(taxi);
-        taxis.add(taxi);
-        taxis.add(taxi);
-        taxis.add(taxi);
-    }
-
     private void setupCommonListTaxi() {
-        dataFake();
+        taxis = AppInstance.getStore().getAllTaxi();
         TaxiAdapter taxiAdapter = new TaxiAdapter(this, taxis);
         listTaxi.setAdapter(taxiAdapter);
         taxiAdapter.setItemClickListener(this);
@@ -75,5 +70,6 @@ public class ListTaxiActivity extends AppCompatActivity implements TaxiAdapter.I
     //region VARS
     private ListView listTaxi;
     private List<Taxi> taxis;
+    private DatabaseAdapter mStore;
     //endregion
 }

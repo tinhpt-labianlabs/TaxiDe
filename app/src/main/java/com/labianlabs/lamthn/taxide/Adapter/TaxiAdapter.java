@@ -110,8 +110,6 @@ public class TaxiAdapter extends BaseAdapter {
 
     private void updateUI(int position) {
         taxiHolder.textName.setText(taxis.get(position).getName());
-        taxiHolder.textPrice4.setText(taxis.get(position).getPrice4());
-        taxiHolder.textPrice7.setText(taxis.get(position).getPrice7());
     }
     //endregion
 }
