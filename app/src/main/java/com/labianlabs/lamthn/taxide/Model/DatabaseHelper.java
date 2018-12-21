@@ -14,7 +14,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //region SYSTEM EVENTS
     public DatabaseHelper(Context context) {
-        super(context, dataBaseName, null, 1);
+        super(context, dataBaseName, null, 5);
         this.context = context;
     }
 

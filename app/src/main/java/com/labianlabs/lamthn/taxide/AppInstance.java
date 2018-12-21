@@ -29,7 +29,7 @@ public class AppInstance extends Application {
         getInstance();
         if (mStore == null) {
             mStore = new DatabaseAdapter(mInstance);
-//            addData();
+            addData();
         }
         return mStore;
     }

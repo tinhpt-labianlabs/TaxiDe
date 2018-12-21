@@ -23,18 +23,18 @@ public class DatabaseAdapter {
     //region PUBLIC UTILS
     public void addTaxi(Taxi taxi) {
 
-        String query = "INSERT INTO "+helper.tableName+" (_id,"+helper.nameTaxi+","+
-                helper.phoneTaxi+","+helper.descriptionTaxi+","+helper.price4Taxi+","
-                +helper.price7Taxi+") VALUES (123,\"abc\",\"123\",\"sdfdsf\",\"3000\",\"7000\")";
+//        String query = "INSERT INTO "+helper.tableName+" (_id,"+helper.nameTaxi+","+
+//                helper.phoneTaxi+","+helper.descriptionTaxi+","+helper.price4Taxi+","
+//                +helper.price7Taxi+") VALUES (123,\"abc\",\"123\",\"sdfdsf\",\"3000\",\"7000\")";
         SQLiteDatabase database = helper.getWritableDatabase();
-        database.execSQL(query);
-//        ContentValues contentValues = new ContentValues();
-//        contentValues.put(helper.nameTaxi, taxi.getName());
-//        contentValues.put(helper.phoneTaxi, taxi.getName());
-//        contentValues.put(helper.descriptionTaxi, taxi.getDescription());
-//        contentValues.put(helper.price4Taxi, escapePrice(taxi.getPrice4()));
-//        contentValues.put(helper.price7Taxi, escapePrice(taxi.getPrice7()));
-//        database.insert(helper.tableName, null, contentValues);
+//        database.execSQL(query);
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(helper.nameTaxi, taxi.getName());
+        contentValues.put(helper.phoneTaxi, taxi.getName());
+        contentValues.put(helper.descriptionTaxi, taxi.getDescription());
+        contentValues.put(helper.price4Taxi, escapePrice(taxi.getPrice4()));
+        contentValues.put(helper.price7Taxi, escapePrice(taxi.getPrice7()));
+        database.insert(helper.tableName, null, contentValues);
         database.close();
     }
 
